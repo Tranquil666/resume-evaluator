@@ -95,14 +95,20 @@ def save_output(data: dict, filename: str):
 with st.sidebar:
     st.title("⚙️ Configuration")
 
-    api_key = st.text_input(
-        "Groq API Key",
-        value=os.getenv("GROQ_API_KEY", ""),
-        type="password",
-        help="Free key from console.groq.com — stored only for this session.",
-    )
-    if api_key:
-        os.environ["GROQ_API_KEY"] = api_key
+    if os.getenv("GROQ_API_KEY"):
+        st.markdown(
+            '<div style="background:#d1fae5;color:#065f46;padding:8px 12px;'
+            'border-radius:8px;font-size:0.85rem;">🔒 API key configured</div>',
+            unsafe_allow_html=True,
+        )
+    else:
+        api_key = st.text_input(
+            "Groq API Key",
+            type="password",
+            help="Free key from console.groq.com — stored only for this session.",
+        )
+        if api_key:
+            os.environ["GROQ_API_KEY"] = api_key
 
     st.divider()
     st.markdown("### How it works")

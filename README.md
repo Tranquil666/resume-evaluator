@@ -18,7 +18,7 @@ An AI-powered ATS (Applicant Tracking System) that parses resumes and scores the
 
 ## Demo
 
-Try it live → **[resume-evaluator.streamlit.app](https://tranquil666-resume-evaluator.streamlit.app)**
+Try it live → **[resume-evaluator.streamlit.app](https://resume-evaluator-5pqlliw3vvtlnucfrsnsno.streamlit.app)**
 
 ## Tech Stack
 
